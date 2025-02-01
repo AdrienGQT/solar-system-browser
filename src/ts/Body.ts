@@ -1,3 +1,7 @@
+interface AroundPlanet {
+  rel: string;
+}
+
 export class Body {
   // Body properties
   name: string;
@@ -9,7 +13,7 @@ export class Body {
   temp: number;
   isPlanet: boolean;
   moons: Array<object>;
-  aroundPlanet: object;
+  aroundPlanet: AroundPlanet
   aroundPlanetName: string = "";
   isSaved: boolean;
 
@@ -37,7 +41,7 @@ export class Body {
     temp: number,
     isPlanet: boolean,
     moons: Array<object>,
-    aroundPlanet: object
+    aroundPlanet: AroundPlanet
   ) {
     // Set body properties
     this.isSaved = isSaved;

@@ -1,8 +1,10 @@
 import { Manager } from "./Manager"
 
+let manager: Manager
+
 const onContentLoaded = () => {
     console.log('Go')
-    const manager = new Manager()
+    manager = new Manager()
 }
 
 window.addEventListener('DOMContentLoaded',onContentLoaded)
