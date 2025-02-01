@@ -1,0 +1,34 @@
+.header {
+//   background-color: green;
+  height: 48px;
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+
+  &__button {
+    all: unset;
+    width: 48px;
+    height: 48px;
+    background-color: map-get($colors, dark-200);
+    // background-color: #272727;
+    color: map-get($colors, light-100);
+    // border: 1px solid map-get($colors, light-300);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--home{
+        background-image: url(/icons/home.svg);
+    }
+
+    &--save{
+        background-image: url(/icons/bookmark.svg);
+    }
+  }
+}

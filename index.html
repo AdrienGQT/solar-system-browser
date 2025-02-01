@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000" />
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <title>Solar System Browser</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__button header__button--home" href=""></a>
+      <a class="header__button header__button--save saveButton" href=""></a>
+    </header>
+
+    <div class="container">
+      <div class="landingScreen">
+        <h3 class="landingScreen__title">Solar System Browser</h3>
+        <p class="landingScreen__text">
+          Use the search bar below or look at your favorites
+        </p>
+        <a class="landingScreen__button saveButton" href="">See my favorites</a>
+      </div>
+
+      <div class="card">
+        <div class="card__head">
+          <div class="card__saveButtonContainer">
+            <button
+              class="card__saveButton card__saveButton--unsaved cardSave"
+            ></button>
+          </div>
+          <p class="card__title bodyName">Title</p>
+          <div class="card__orbitData">
+            <p class="card__orbitDataText bodyOrbitText">Orbiting around</p>
+            <p class="card__orbitDataValue bodyOrbitValue">Planet</p>
+          </div>
+        </div>
+        <img
+          class="card__image bodyImage"
+          src=""
+          alt="Image of planet"
+          onerror="this.src = '/planet/placeholder.png';"
+        />
+        <div class="card__dataContainer">
+          <div class="card__dataLine">
+            <img
+              class="card__dataLineIcon"
+              src="/icons/temperature.svg"
+              alt=""
+            />
+            <p class="card__data">
+              Temperature : <span class="bodyTemp"></span>
+            </p>
+          </div>
+          <div class="card__dataLine">
+            <img class="card__dataLineIcon" src="/icons/gravity.svg" alt="" />
+            <p class="card__data">
+              Gravity : <span class="bodyGravity"></span>
+            </p>
+          </div>
+          <div class="card__dataLine">
+            <img class="card__dataLineIcon" src="/icons/type.svg" alt="" />
+            <p class="card__data">Type : <span class="bodyType"></span></p>
+          </div>
+          <div class="card__dataLine">
+            <img class="card__dataLineIcon" src="/icons/weight.svg" alt="" />
+            <p class="card__data">Mass : <span class="bodyMass"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form class="form" action="POST">
+      <div class="searchBar__container">
+        <!-- <label for="body" class="searchBar__label">Search for a celestial body</label> -->
+        <input
+          class="searchBar"
+          autocomplete="off"
+          readonly
+          onfocus="this.removeAttribute('readonly');"
+          placeholder="Search for a planet or moon..."
+          type="search"
+          name="body"
+          id=""
+        />
+      </div>
+      <button type="submit" class="searchButton">Search</button>
+    </form>
+    <script type="module" src="src/ts/main.ts"></script>
+  </body>
+</html>

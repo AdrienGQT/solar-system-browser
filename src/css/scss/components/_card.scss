@@ -1,0 +1,135 @@
+.card {
+  position: relative;
+  height: 100%;
+  border-radius: 16px;
+  background-color: map-get($colors, dark-100);
+  border: 1px solid map-get($colors, light-300);
+  padding: 16px;
+  box-sizing: border-box;
+  min-width: calc(100vw - 32px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  gap: 12px;
+
+  &::after {
+    z-index: 10;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  &__head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 68px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    color: map-get($colors, light-100);
+    font-family: $font-display;
+  }
+
+  &__dataContainer {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  &__dataLine {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__dataLineIcon {
+    height: 24px;
+    width: 24px;
+  }
+
+  &__data {
+    color: map-get($colors, light-100);
+    font-family: $font-main;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__orbitData {
+    color: map-get($colors, light-100);
+    font-family: $font-main;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    z-index: 100;
+
+    & p {
+      margin: 0;
+    }
+  }
+
+  &__image {
+    z-index: 1;
+    position: absolute;
+    bottom: -150px;
+    width: 150%;
+    aspect-ratio: 1/1;
+    filter: saturate(1.2);
+    filter: brightness(1.1);
+  }
+  
+  &__saveButtonContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__saveButton {
+    all: unset;
+    width: 48px;
+    height: 48px;
+    background-color: map-get($colors, dark-200);
+    color: map-get($colors, light-100);
+    // border: 1px solid map-get($colors, light-300);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--unsaved {
+      background-size: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(/icons/bookmark-add.svg);
+    }
+
+    &--saved {
+      background-size: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(/icons/bookmark-remove.svg);
+    }
+  }
+}
