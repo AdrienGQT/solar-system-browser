@@ -7,6 +7,7 @@
   padding: 16px;
   box-sizing: border-box;
   min-width: calc(100vw - 32px);
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,6 +37,7 @@
   }
 
   &__title {
+    z-index: 10;
     font-size: 68px;
     margin: 0;
     width: 100%;
@@ -90,7 +92,7 @@
     z-index: 1;
     position: absolute;
     bottom: -150px;
-    width: 150%;
+    width: 550px;
     aspect-ratio: 1/1;
     filter: saturate(1.2);
     filter: brightness(1.1);
