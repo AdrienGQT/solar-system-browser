@@ -45,6 +45,28 @@ input[type=search]::-webkit-search-cancel-button {
   height: 0;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  background: #aea58b;
+  border: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d2c9b1;
+}
+
 .header {
   height: 48px;
   width: 100%;

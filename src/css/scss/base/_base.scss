@@ -42,3 +42,29 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 0;
     height: 0;
   }
+
+
+  // Scroll bar
+
+  /* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  background: map-get($colors , light-300 );
+  border: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: map-get($colors , light-200 );
+
+}
