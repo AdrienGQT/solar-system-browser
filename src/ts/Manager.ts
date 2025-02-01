@@ -48,13 +48,15 @@ export class Manager {
     });
 
     // Detect click to go to saves page
-    document.querySelector(".saveButton")?.addEventListener("click", (e) => {
-      e.preventDefault();
-      this.bodies = [];
-      this.containerHTML.innerHTML = "";
-      this.savedBodies.forEach((e) => {
-        this.fetchBodyData(this.API_URL + e);
-      });
+    document.querySelectorAll(".saveButton").forEach(saveButton => {
+      saveButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        this.bodies = [];
+        this.containerHTML.innerHTML = "";
+        this.savedBodies.forEach((e) => {
+          this.fetchBodyData(this.API_URL + e);
+        });
+      })
     });
   }
 
