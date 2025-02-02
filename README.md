@@ -16,4 +16,4 @@
 - LocalStorage for saving user data  
 
 ## 🌠 Live Demo  
-The project is currently available **only on mobile**. Stay tuned for future updates!  
+The project is currently available **only on mobile** here https://solar-system-browser.vercel.app/. Stay tuned for future updates!  
